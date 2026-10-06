@@ -121,14 +121,20 @@
         "fecha": "2026",
         "historia": "Compartir una pizza, conversar y pasar un buen rato. No hacía falta mucho más para disfrutar de estar juntos.",
         "foto": "assets/viajes/pizzeria.jpeg",
-        "coordenadas": null
+        "coordenadas": [
+          -16.398475938616265,
+          -71.53595814604606
+        ]
       },
       {
         "nombre": "Una tarde de Api",
         "fecha": "2026",
         "historia": "Una de esas salidas sencillas que terminan convirtiéndose en un recuerdo bonito. Algo para tomar, algo de qué hablar y tiempo para compartir.",
         "foto": "assets/viajes/api.jpeg",
-        "coordenadas": null
+        "coordenadas": [
+          -16.39945818224588,
+          -71.53329076439239
+        ]
       },
       {
         "nombre": "Una película de Totoro",
