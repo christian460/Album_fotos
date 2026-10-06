@@ -24,7 +24,7 @@ def render_small_moments(data: dict):
 <div style="margin-top: 2rem;">"""
     
     items_html = ""
-    icons = ["💬", "🍽️", "😂", "💬", "🌷", "❤️"]
+    icons = ["💬", "🍽️", "😂", "🌷", "❤️"]
     for idx, pensamiento in enumerate(pensamientos):
         icon = icons[idx % len(icons)]
         items_html += f"""<div class="thought-card">

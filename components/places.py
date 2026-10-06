@@ -28,9 +28,26 @@ def render_places(data: dict):
         foto_path = destino.get("foto", "")
         coords = destino.get("coordenadas", None)
         
-        # Verificar si hay coordenadas para futuro mapa interactivo
-        if coords and isinstance(coords, dict) and "lat" in coords and "lon" in coords:
-            map_points.append({"lat": coords["lat"], "lon": coords["lon"]})
+        # Verificar y procesar coordenadas (soporta lista [lat, lon] o dict {"lat": ..., "lon": ...})
+        if coords:
+            lat, lon = None, None
+            if isinstance(coords, (list, tuple)) and len(coords) >= 2:
+                try:
+                    lat = float(coords[0])
+                    lon = float(coords[1])
+                except (ValueError, TypeError):
+                    pass
+            elif isinstance(coords, dict):
+                lat = coords.get("lat") or coords.get("latitude")
+                lon = coords.get("lon") or coords.get("lng") or coords.get("longitude")
+                try:
+                    lat = float(lat) if lat is not None else None
+                    lon = float(lon) if lon is not None else None
+                except (ValueError, TypeError):
+                    lat, lon = None, None
+            
+            if lat is not None and lon is not None:
+                map_points.append({"lat": lat, "lon": lon, "nombre": nombre})
             
         foto_html = ""
         if foto_path:
@@ -50,10 +67,14 @@ def render_places(data: dict):
     full_html = header_html + cards_html + footer_html
     st.html(full_html)
     
-    # Si existen coordenadas reales configuradas por el usuario, mostrar mapa interactivo
+    # Si existen coordenadas configuradas, mostrar mapa interactivo
     if map_points:
-        st.html("""<div class="story-card animate-fade-in" style="margin-top: 1rem;">
-<div class="story-badge" style="text-align: center; margin-bottom: 1rem;">MAPA DE NUESTRA HISTORIA</div>
+        st.html("""<div class="story-card animate-fade-in" style="margin-top: 1.5rem;">
+<div class="story-badge" style="text-align: center; margin-bottom: 0.5rem;">🗺️ MAPA DE NUESTRA HISTORIA</div>
+<div class="story-subtitle" style="text-align: center; margin-bottom: 1rem;">Los puntos exactos donde ocurrieron nuestros recuerdos</div>
 </div>""")
         df = pd.DataFrame(map_points)
-        st.map(df, zoom=4)
+        # Si hay 1 solo punto, hacer zoom cercano (14); si hay varios, zoom automático o 12
+        zoom_level = 14 if len(map_points) == 1 else 12
+        st.map(df, latitude="lat", longitude="lon", zoom=zoom_level)
+

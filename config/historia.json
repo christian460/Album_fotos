@@ -37,9 +37,9 @@
       },
       {
         "fecha": "Julio 2026",
-        "titulo": "Primer recuerdo especial",
-        "descripcion": "Esa tarde en la que el tiempo pareció detenerse y supimos que esto era diferente.",
-        "icono": "☕",
+        "titulo": "Celebrando mi cumpleaños",
+        "descripcion": "En julio celebramos mi cumpleaños juntos. Fue un momento bonito que pude compartir contigo y que ahora forma parte de esos recuerdos que guardo con mucho cariño.",
+        "icono": "🎂",
         "foto": "assets/momentos/recuerdo_1.jpg"
       },
       {
@@ -57,37 +57,35 @@
         "foto": "assets/momentos/flor.jpg"
       },
       {
-        "fecha": "HOY",
-        "titulo": "Nuestro presente",
-        "descripcion": "Siguiendo juntos, celebrando cada detalle y eligiéndonos cada día.",
+        "fecha": "05 de octubre de 2026",
+        "titulo": "Nuestros cuatro meses ❤️",
+        "descripcion": "Hoy cumplimos cuatro meses juntos. Cuatro meses de momentos, risas, conversaciones, pequeños detalles y también de aprender a conocernos cada día un poco más. Puede que no parezca tanto tiempo, pero ya tenemos muchos recuerdos que significan mucho para mí. Y lo más bonito es saber que todavía nos quedan muchos más por vivir juntos.",
         "icono": "❤️",
         "foto": "assets/momentos/recuerdo_2.jpg"
       }
     ]
   },
   "capitulo_galeria": {
-    "titulo": "Momentos que Guardamos",
-    "subtitulo": "Menos fotografías, más significado. Instantes que quedaron grabados en el alma.",
     "items": [
       {
-        "titulo": "Nuestra primera salida",
-        "fecha": "Junio 2026",
-        "descripcion": "Los nervios del principio convertidos en la certeza de haberte encontrado.",
-        "foto": "assets/momentos/momento_1.jpg",
+        "titulo": "Una tarde jugando juntos",
+        "fecha": "2026",
+        "descripcion": "Una de esas tardes en las que simplemente fuimos a jugar, reírnos y pasar un buen rato juntos. Puede parecer un momento sencillo, pero es de esos recuerdos que me gusta guardar.",
+        "foto": "assets/momentos/mom_ludo.jpeg",
         "destacado": true
       },
       {
-        "titulo": "Atardeceres compartidos",
+        "titulo": "Una pizza entre nosotros",
         "fecha": "2026",
-        "descripcion": "Cuando el cielo cambia de color y el silencio se vuelve el abrazo más dulce.",
-        "foto": "assets/momentos/momento_2.jpg",
+        "descripcion": "Fuimos a comer pizza, conversamos y disfrutamos de estar juntos. No necesitábamos hacer algo especial para pasarla bien; simplemente compartir ese momento ya era suficiente.",
+        "foto": "assets/momentos/mom_pizza.jpeg",
         "destacado": false
       },
       {
-        "titulo": "Risas espontáneas",
+        "titulo": "Una tarde de cine y Minions",
         "fecha": "2026",
-        "descripcion": "Esos instantes sin pose, donde la felicidad es genuina y eterna.",
-        "foto": "assets/momentos/momento_3.jpg",
+        "descripcion": "Fuimos al cine a ver los Minions. Entre la película, las risas y el tiempo juntos, terminamos creando otro de esos pequeños recuerdos que ahora forman parte de nuestra historia.",
+        "foto": "assets/momentos/mom_minions.jpeg",
         "destacado": false
       }
     ]
@@ -106,27 +104,44 @@
   },
   "capitulo_lugares": {
     "titulo": "Los Lugares que Vivimos",
-    "subtitulo": "Rincones que ahora guardan un pedazo de nuestra historia",
+    "subtitulo": "No necesitamos ir muy lejos para crear recuerdos",
     "destinos": [
       {
-        "nombre": "Nuestro Primer Encuentro",
-        "fecha": "15 de Junio de 2026",
-        "historia": "El lugar exacto donde las miradas se cruzaron y todo cobró sentido.",
-        "foto": "assets/viajes/lugar_1.jpg",
+        "nombre": "Una tarde en la Plaza de Armas",
+        "fecha": "2026",
+        "historia": "Una de esas salidas que quizás parecían simples en ese momento, pero que ahora forman parte de nuestros primeros recuerdos juntos.",
+        "foto": "assets/momentos/flor.jpg",
+        "coordenadas": [
+          -16.3988,
+          -71.5369
+        ]
+      },
+      {
+        "nombre": "Una pizza entre nosotros",
+        "fecha": "2026",
+        "historia": "Compartir una pizza, conversar y pasar un buen rato. No hacía falta mucho más para disfrutar de estar juntos.",
+        "foto": "assets/viajes/pizzeria.jpeg",
         "coordenadas": null
       },
       {
-        "nombre": "Ese Café Favorito",
-        "fecha": "Julio 2026",
-        "historia": "Tazas calientes, confidencias y horas que volaban como si fueran minutos.",
-        "foto": "",
+        "nombre": "Una tarde de Api",
+        "fecha": "2026",
+        "historia": "Una de esas salidas sencillas que terminan convirtiéndose en un recuerdo bonito. Algo para tomar, algo de qué hablar y tiempo para compartir.",
+        "foto": "assets/viajes/api.jpeg",
         "coordenadas": null
       },
       {
-        "nombre": "Nuestra Escapada Especial",
-        "fecha": "Septiembre 2026",
-        "historia": "Dejar la rutina atrás para descubrir nuevos paisajes de la mano.",
-        "foto": "assets/viajes/lugar_2.jpg",
+        "nombre": "Una película de Totoro",
+        "fecha": "2026",
+        "historia": "Fuimos a ver Totoro y terminamos compartiendo uno de esos momentos que se quedan en la memoria. Quizás fue solo una película, pero para nosotros terminó siendo parte de nuestra historia.",
+        "foto": "assets/viajes/totoro.jpeg",
+        "coordenadas": null
+      },
+      {
+        "nombre": "La cafetería",
+        "fecha": "2026",
+        "historia": "Un café, una buena conversación y una partida de Ludo que, por cierto, terminé ganando. Una tarde sencilla que terminó convirtiéndose en uno de esos recuerdos que me gusta guardar.",
+        "foto": "assets/viajes/cafeteria.jpeg",
         "coordenadas": null
       }
     ]
@@ -156,10 +171,10 @@
   },
   "capitulo_carta": {
     "titulo": "Para ti ❤️",
-    "subtitulo": "Una carta desde el corazón",
-    "cuerpo": "Gracias por cada sonrisa compartida, por la calma en los días difíciles y por hacer que lo cotidiano se vuelva extraordinario.\n\nEstar a tu lado es el recordatorio constante de que las cosas más hermosas de la vida no se fuerzan: se sienten, se cuidan y se eligen con el corazón cada mañana.\n\nGracias por ser mi lugar seguro, mi inspiración y mi felicidad más honesta.",
-    "frase_futuro": "Todavía quedan fotografías que no hemos tomado, lugares que no hemos conocido y recuerdos que todavía no hemos creado.",
-    "cierre": "Esta historia continúa...",
-    "foto": "assets/final/final.jpg"
+    "subtitulo": "Unas palabras que quería decirte",
+    "cuerpo": "Gracias por cada momento que hemos compartido hasta ahora. Por las conversaciones que se alargan sin darnos cuenta, por las risas, por los pequeños detalles y por todas esas cosas que quizás parecen simples, pero que para mí significan mucho.\n\nTambién quiero agradecerte por los momentos que no fueron tan fáciles. Hemos tenido nuestros problemas, nuestras diferencias y días en los que las cosas no salieron como esperábamos. Pero, a pesar de todo, hemos sabido seguir adelante, hablar, entendernos y encontrar la manera de continuar juntos. Y creo que esos momentos también son parte importante de nuestra historia, porque nos han ayudado a conocernos un poco más y a valorar lo que tenemos.\n\nMe gusta saber que puedo compartir contigo desde los momentos más especiales hasta los días más normales. Porque al final, son esos pequeños momentos los que poco a poco se van convirtiendo en nuestros recuerdos.\n\nNo sé exactamente qué nos espera más adelante, pero sí sé que me hace mucha ilusión seguir descubriéndolo contigo. Seguir conociéndonos, seguir riéndonos, seguir aprendiendo el uno del otro, superar juntos lo que venga y ver qué historia vamos construyendo con el tiempo.",
+    "frase_futuro": "Todavía nos quedan muchos lugares por conocer, muchas fotos por tomar, muchas cosas por aprender juntos y, sobre todo, muchos recuerdos que todavía no existen.",
+    "cierre": "Y si esto recién comienza, espero poder seguir escribiendo esta historia contigo. ❤️",
+    "foto": "assets/final/final.jpeg"
   }
 }
