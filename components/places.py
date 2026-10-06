@@ -5,8 +5,8 @@ from utils.image_helper import image_to_base64
 
 def generate_leaflet_map_html(points: list) -> str:
     """
-    Genera un mapa interactivo Leaflet con diseño romántico (Voyager CartoDB tiles)
-    y marcadores personalizados para cada lugar con recuerdos.
+    Genera un mapa interactivo Leaflet con diseño romántico y marcadores de corazón.
+    Incluye reintentos de inicialización y sincronización de tamaño para iframe.
     """
     points_json = json.dumps(points)
     
@@ -15,8 +15,7 @@ def generate_leaflet_map_html(points: list) -> str:
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <style>
     * {{
       box-sizing: border-box;
@@ -27,13 +26,15 @@ def generate_leaflet_map_html(points: list) -> str:
       background: transparent;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       padding: 4px;
+      overflow: hidden;
     }}
     #map {{
       width: 100%;
-      height: 390px;
+      height: 380px;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(74, 45, 52, 0.12);
       border: 1.5px solid rgba(132, 42, 59, 0.2);
+      background: #fdfaf7;
     }}
     .custom-heart-pin {{
       background: #842A3B;
@@ -76,45 +77,61 @@ def generate_leaflet_map_html(points: list) -> str:
 </head>
 <body>
   <div id="map"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script>
-    const points = {points_json};
-    if (points && points.length > 0) {{
-      const map = L.map('map', {{
-        scrollWheelZoom: true,
-        zoomControl: true
-      }});
-      
-      // Capa base estética y limpia (Voyager de CartoDB)
-      L.tileLayer('https://{{s}}.basemaps.cartocdn.com/rastertiles/voyager/{{z}}/{{x}}/{{y}}{{r}}.png', {{
-        attribution: '&copy; OpenStreetMap &copy; CARTO',
-        maxZoom: 19
-      }}).addTo(map);
-      
-      const bounds = [];
-      
-      points.forEach(pt => {{
-        const pinIcon = L.divIcon({{
-          className: '',
-          html: '<div class="custom-heart-pin">❤️</div>',
-          iconSize: [34, 34],
-          iconAnchor: [17, 17],
-          popupAnchor: [0, -18]
+    function initMap() {{
+      if (typeof L === 'undefined') {{
+        setTimeout(initMap, 100);
+        return;
+      }}
+      const points = {points_json};
+      if (points && points.length > 0) {{
+        const map = L.map('map', {{
+          scrollWheelZoom: true,
+          zoomControl: true
         }});
         
-        const marker = L.marker([pt.lat, pt.lon], {{ icon: pinIcon }}).addTo(map);
-        marker.bindPopup(`
-          <div class="popup-title">${{pt.nombre}}</div>
-          <div class="popup-date">📍 ${{pt.fecha}}</div>
-        `);
+        L.tileLayer('https://tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png', {{
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+          maxZoom: 19
+        }}).addTo(map);
         
-        bounds.push([pt.lat, pt.lon]);
-      }});
-      
-      if (bounds.length === 1) {{
-        map.setView(bounds[0], 15);
-      }} else {{
-        map.fitBounds(bounds, {{ padding: [45, 45], maxZoom: 16 }});
+        const bounds = [];
+        
+        points.forEach(pt => {{
+          const pinIcon = L.divIcon({{
+            className: '',
+            html: '<div class="custom-heart-pin">❤️</div>',
+            iconSize: [34, 34],
+            iconAnchor: [17, 17],
+            popupAnchor: [0, -18]
+          }});
+          
+          const marker = L.marker([pt.lat, pt.lon], {{ icon: pinIcon }}).addTo(map);
+          marker.bindPopup(`
+            <div class="popup-title">${{pt.nombre}}</div>
+            <div class="popup-date">📍 ${{pt.fecha}}</div>
+          `);
+          
+          bounds.push([pt.lat, pt.lon]);
+        }});
+        
+        if (bounds.length === 1) {{
+          map.setView(bounds[0], 15);
+        }} else {{
+          map.fitBounds(bounds, {{ padding: [50, 50], maxZoom: 16 }});
+        }}
+
+        // Sincronización obligatoria para renderizado en iframe
+        setTimeout(function() {{ map.invalidateSize(); }}, 200);
+        setTimeout(function() {{ map.invalidateSize(); }}, 600);
       }}
+    }}
+
+    if (document.readyState === 'loading') {{
+      document.addEventListener('DOMContentLoaded', initMap);
+    }} else {{
+      initMap();
     }}
   </script>
 </body>

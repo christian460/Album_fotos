@@ -141,14 +141,20 @@
         "fecha": "2026",
         "historia": "Fuimos a ver Totoro y terminamos compartiendo uno de esos momentos que se quedan en la memoria. Quizás fue solo una película, pero para nosotros terminó siendo parte de nuestra historia.",
         "foto": "assets/viajes/totoro.jpeg",
-        "coordenadas": null
+        "coordenadas": [
+          -16.40234017206961,
+          -71.5296630947466
+        ]
       },
       {
         "nombre": "La cafetería",
         "fecha": "2026",
         "historia": "Un café, una buena conversación y una partida de Ludo que, por cierto, terminé ganando. Una tarde sencilla que terminó convirtiéndose en uno de esos recuerdos que me gusta guardar.",
         "foto": "assets/viajes/cafeteria.jpeg",
-        "coordenadas": null
+        "coordenadas": [
+          -16.393324458109145,
+          -71.53514710604448
+        ]
       }
     ]
   },
