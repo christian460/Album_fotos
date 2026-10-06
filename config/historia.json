@@ -1,0 +1,165 @@
+{
+  "nombre_historia": "Nuestra Historia",
+  "pareja": {
+    "persona_1": "Ysabel",
+    "persona_2": "Christian"
+  },
+  "fecha_inicio": "2026-06-05",
+  "frase_principal": "No se trata solamente del tiempo que llevamos juntos, sino de todos los recuerdos que vamos construyendo durante ese tiempo.",
+  "musica": {
+    "archivo": "assets/musica/Please.mp3",
+    "titulo": "La primera canción que te canté para ti"
+  },
+  "capitulo_portada": {
+    "titulo": "NUESTRA HISTORIA",
+    "subtitulo": "Una historia que comenzó el 05 de junio de 2026.",
+    "frase_boton": "Comenzar nuestra historia ❤️",
+    "foto": "assets/portada/portada.jpg"
+  },
+  "capitulo_inicio": {
+    "titulo": "El Comienzo",
+    "fecha": "05 de Junio de 2026",
+    "frase": "Todas las historias importantes tienen un comienzo. Esta es la nuestra.",
+    "texto": "Un 05 de junio de 2026. El día en que intenté convertir todo lo que sentía en una pequeña página web y, con un poco de nervios, te hice la pregunta. No sabía todo lo que vendría después, pero sí sabía algo: quería que esta historia comenzara contigo.",
+    "cita_adicional": "Hay momentos que dividen la vida en un antes y un después.",
+    "foto": "assets/inicio/propuesta.png"
+  },
+  "capitulo_timeline": {
+    "titulo": "Nuestra Línea de Tiempo",
+    "subtitulo": "Los momentos clave que han marcado nuestro camino",
+    "eventos": [
+      {
+        "fecha": "05 JUN 2026",
+        "titulo": "El Comienzo",
+        "descripcion": "El momento exacto donde dos caminos decidieron empezar a caminar juntos.",
+        "icono": "✨",
+        "foto": ""
+      },
+      {
+        "fecha": "Julio 2026",
+        "titulo": "Primer recuerdo especial",
+        "descripcion": "Esa tarde en la que el tiempo pareció detenerse y supimos que esto era diferente.",
+        "icono": "☕",
+        "foto": "assets/momentos/recuerdo_1.jpg"
+      },
+      {
+        "fecha": "Agosto 2026",
+        "titulo": "Una tarde entre café y Ludo",
+        "descripcion": "Una tarde en una cafetería, una buena conversación y una partida de Ludo que, por supuesto, terminé ganando. Pero si soy sincero, la mejor parte de esa tarde no fue ganar, sino haberla compartido contigo.",
+        "icono": "🎲",
+        "foto": "assets/momentos/ludo.jpeg"
+      },
+      {
+        "fecha": "Septiembre 2026",
+        "titulo": "Un pequeño detalle para ti",
+        "descripcion": "Ese día quise entregarte un ramo de flores, pero creo que la sonrisa que me regalaste terminó siendo el mejor detalle de todos.",
+        "icono": "🌷",
+        "foto": "assets/momentos/flor.jpg"
+      },
+      {
+        "fecha": "HOY",
+        "titulo": "Nuestro presente",
+        "descripcion": "Siguiendo juntos, celebrando cada detalle y eligiéndonos cada día.",
+        "icono": "❤️",
+        "foto": "assets/momentos/recuerdo_2.jpg"
+      }
+    ]
+  },
+  "capitulo_galeria": {
+    "titulo": "Momentos que Guardamos",
+    "subtitulo": "Menos fotografías, más significado. Instantes que quedaron grabados en el alma.",
+    "items": [
+      {
+        "titulo": "Nuestra primera salida",
+        "fecha": "Junio 2026",
+        "descripcion": "Los nervios del principio convertidos en la certeza de haberte encontrado.",
+        "foto": "assets/momentos/momento_1.jpg",
+        "destacado": true
+      },
+      {
+        "titulo": "Atardeceres compartidos",
+        "fecha": "2026",
+        "descripcion": "Cuando el cielo cambia de color y el silencio se vuelve el abrazo más dulce.",
+        "foto": "assets/momentos/momento_2.jpg",
+        "destacado": false
+      },
+      {
+        "titulo": "Risas espontáneas",
+        "fecha": "2026",
+        "descripcion": "Esos instantes sin pose, donde la felicidad es genuina y eterna.",
+        "foto": "assets/momentos/momento_3.jpg",
+        "destacado": false
+      }
+    ]
+  },
+  "capitulo_pequenos_momentos": {
+    "titulo": "Pequeños Momentos",
+    "frase_1": "No todos nuestros recuerdos fueron grandes momentos.",
+    "frase_2": "Algunos fueron simplemente días normales que se volvieron especiales porque estábamos juntos.",
+    "pensamientos": [
+      "Esas conversaciones que empiezan con un simple '¿qué haces?' y terminan durando mucho más de lo esperado.",
+      "Compartir algo de comer, conversar de cualquier cosa y disfrutar simplemente de estar juntos.",
+      "Reírnos de nuestras propias ocurrencias y hacer que un momento cualquiera termine siendo un buen recuerdo.",
+      "Esos pequeños gestos tuyos que quizás parecen insignificantes, pero que yo sí recuerdo.",
+      "Estar contigo incluso cuando no hacemos nada especial y sentir que, de alguna manera, ese momento ya es especial."
+    ]
+  },
+  "capitulo_lugares": {
+    "titulo": "Los Lugares que Vivimos",
+    "subtitulo": "Rincones que ahora guardan un pedazo de nuestra historia",
+    "destinos": [
+      {
+        "nombre": "Nuestro Primer Encuentro",
+        "fecha": "15 de Junio de 2026",
+        "historia": "El lugar exacto donde las miradas se cruzaron y todo cobró sentido.",
+        "foto": "assets/viajes/lugar_1.jpg",
+        "coordenadas": null
+      },
+      {
+        "nombre": "Ese Café Favorito",
+        "fecha": "Julio 2026",
+        "historia": "Tazas calientes, confidencias y horas que volaban como si fueran minutos.",
+        "foto": "",
+        "coordenadas": null
+      },
+      {
+        "nombre": "Nuestra Escapada Especial",
+        "fecha": "Septiembre 2026",
+        "historia": "Dejar la rutina atrás para descubrir nuevos paisajes de la mano.",
+        "foto": "assets/viajes/lugar_2.jpg",
+        "coordenadas": null
+      }
+    ]
+  },
+  "capitulo_construyendo": {
+    "titulo": "Todo lo que Estamos Construyendo",
+    "frase_central": "El tiempo pasó, y sin darnos cuenta, fuimos llenándolo de recuerdos.",
+    "reflexion": "Cada día juntos nos ha dejado algo: una conversación, una risa, un abrazo o simplemente un momento que ahora forma parte de nuestra historia. No sé exactamente qué nos espera más adelante, pero me gusta pensar que todavía nos quedan muchas cosas por vivir y muchos recuerdos por crear juntos.",
+    "pilares": [
+      {
+        "titulo": "Cariño Sincero",
+        "descripcion": "Un amor que cuida los detalles y celebra la autenticidad del otro."
+      },
+      {
+        "titulo": "Crecer Juntos",
+        "descripcion": "Aprender uno del otro, apoyarnos en nuestros sueños y descubrir poco a poco todo lo que podemos construir juntos."
+      },
+      {
+        "titulo": "Elegirnos Cada Día",
+        "descripcion": "Estar el uno para el otro, incluso en los días simples, y seguir disfrutando de tenernos en nuestras vidas."
+      },
+      {
+        "titulo": "Reírnos Juntos",
+        "descripcion": "Esas bromas, miradas y momentos que quizá nadie más entiende, pero que para nosotros significan muchísimo."
+      }
+    ]
+  },
+  "capitulo_carta": {
+    "titulo": "Para ti ❤️",
+    "subtitulo": "Una carta desde el corazón",
+    "cuerpo": "Gracias por cada sonrisa compartida, por la calma en los días difíciles y por hacer que lo cotidiano se vuelva extraordinario.\n\nEstar a tu lado es el recordatorio constante de que las cosas más hermosas de la vida no se fuerzan: se sienten, se cuidan y se eligen con el corazón cada mañana.\n\nGracias por ser mi lugar seguro, mi inspiración y mi felicidad más honesta.",
+    "frase_futuro": "Todavía quedan fotografías que no hemos tomado, lugares que no hemos conocido y recuerdos que todavía no hemos creado.",
+    "cierre": "Esta historia continúa...",
+    "foto": "assets/final/final.jpg"
+  }
+}
