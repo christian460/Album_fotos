@@ -111,7 +111,7 @@ elif current_idx == 7:
 # Botones de navegación inferior (visibles a partir del capítulo 1)
 if current_idx > 0:
     st.html("<div style='margin-top: 2rem;'></div>")
-    col_prev, col_spacer, col_next = st.columns([1, 1, 1])
+    col_prev, col_next = st.columns([1, 1])
     
     with col_prev:
         st.html('<div class="btn-secondary"></div>')
@@ -125,3 +125,4 @@ if current_idx > 0:
         else:
             if st.button("Releer nuestra historia ↺", key="btn_nav_restart", use_container_width=True):
                 restart_story()
+
